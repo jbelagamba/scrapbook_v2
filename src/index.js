@@ -1,3 +1,12 @@
+import api from "./services/api";
+
+async function teste() {
+  const response = await api.get('/scraps');
+  console.log(response);
+}
+
+teste();
+
 class TaskList {
   constructor() {
     this.titleInput = document.getElementById("messageTitle");
@@ -121,3 +130,23 @@ class TaskList {
 }
 
 new TaskList();
+
+/*import axios from "axios";
+
+// axios
+//  .get('http://api.github.com/users/jbelagamba')
+//  .then((response) => console.log(response.data))
+//  .catch((error) => console.log(error));
+
+async function getGithubUserData() {
+  //const response = await axios.get('http://api.github.com/users/jbelagamba');
+  //console.log(response);
+  try {
+    const response = await axios.get('http://api.github.com/users/jbelagamba');
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getGithubUserData();*/
